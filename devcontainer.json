@@ -1,0 +1,28 @@
+{
+  "name": "TaskFlow CRM",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/php:1": { "version": "8.3" }
+  },
+  "postCreateCommand": "composer install && npm install && cp .env.example .env && php artisan key:generate",
+  "forwardPorts": [8000, 5173],
+  "portsAttributes": {
+    "8000": { "label": "Laravel API", "onAutoForward": "openBrowser" },
+    "5173": { "label": "Vite Dev Server", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "Vue.volar",
+        "bradlc.vscode-tailwindcss",
+        "humao.rest-client",
+        "Prisma.prisma"
+      ],
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php"
+      }
+    }
+  }
+}
