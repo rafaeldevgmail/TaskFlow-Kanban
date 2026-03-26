@@ -5,7 +5,7 @@
     "ghcr.io/devcontainers/features/node:1": { "version": "20" },
     "ghcr.io/devcontainers/features/php:1": { "version": "8.3" }
   },
-  "postCreateCommand": "composer install && npm install && cp .env.example .env && php artisan key:generate",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y php8.4-pgsql && composer install && npm install && php artisan key:generate",
   "forwardPorts": [8000, 5173],
   "portsAttributes": {
     "8000": { "label": "Laravel API", "onAutoForward": "openBrowser" },

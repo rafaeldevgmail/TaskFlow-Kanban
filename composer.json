@@ -1,0 +1,17 @@
+{
+    "require": {
+        "tymon/jwt-auth": "^2.3",
+        "dedoc/scramble": "^0.13.14"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.4",
+        "laravel/telescope": "^5.18",
+        "pestphp/pest-plugin-laravel": "^4.1",
+        "barryvdh/laravel-ide-helper": "^3.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
