@@ -7,7 +7,6 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-336791?style=flat-square&logo=postgresql&logoColor=white)
 ![JWT](https://img.shields.io/badge/Auth-JWT-d63aff?style=flat-square)
 ![Tests](https://img.shields.io/badge/Tests-Pest-f7971e?style=flat-square)
-![CI](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-6c63ff?style=flat-square&logo=githubactions&logoColor=white)
 
 ---
 
@@ -28,8 +27,6 @@
 - 🌙 **Tema Claro/Escuro** — Alternância com persistência no localStorage
 - 📚 **API Documentada** — OpenAPI 3.1 gerada automaticamente via Scramble (`/docs/api`)
 - 🧪 **Testes Automatizados** — 16+ testes com Pest cobrindo toda a API
-- 🚀 **CI/CD** — Pipeline GitHub Actions com testes, lint e build automáticos
-- ☁️ **Codespaces Ready** — Ambiente de desenvolvimento configurado com `devcontainer.json`
 
 ---
 
@@ -113,18 +110,6 @@ npm run dev
 ```
 
 Acesse: **http://localhost:5173**
-
----
-
-## 🐳 GitHub Codespaces
-
-O projeto inclui `.devcontainer/devcontainer.json` configurado. Basta abrir no Codespaces:
-
-1. Clique em **Code → Codespaces → Create codespace**
-2. Aguarde o setup automático (~2 min)
-3. Na aba **Ports**, torne as portas `8000` e `5173` públicas
-4. Configure o `.env` com suas credenciais do Neon.tech
-5. Execute `php artisan migrate --seed && php artisan serve` e `npm run dev`
 
 ---
 
@@ -250,14 +235,4 @@ TaskFlow-Kanban/
 - **SSL obrigatório** — conexão com Neon.tech sempre criptografada
 - **CORS configurado** — apenas origens permitidas acessam a API
 
----
 
-## 👤 Autor
-
-Feito com ☕ e determinação para impressionar recrutadores.
-
----
-
-## 📄 Licença
-
-MIT License — use, modifique e distribua à vontade.
