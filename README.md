@@ -8,13 +8,6 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-d63aff?style=flat-square)
 ![Tests](https://img.shields.io/badge/Tests-Pest-f7971e?style=flat-square)
 
----
-
-## 📸 Preview
-
-| Dashboard | Kanban | Clientes |
-|-----------|--------|----------|
-| Stats, gráficos e tarefas recentes | Board com 4 colunas drag-and-drop | Tabela com busca e filtros |
 
 ---
 
@@ -177,22 +170,6 @@ php artisan test --filter AuthTest
 | Tasks (CRUD + status + auth) | ✅ 6 |
 | Clients (CRUD + auth) | ✅ 5 |
 | Dashboard | ✅ 1 |
-
----
-
-## 🔄 CI/CD Pipeline
-
-O pipeline GitHub Actions roda automaticamente em todo `push` e `pull_request`:
-
-```
-Push / PR
-   │
-   ├── 🧪 test      → PHP 8.3 + PostgreSQL 17 + Pest (cobertura mín. 80%)
-   ├── 🎨 lint      → Laravel Pint (PSR-12)
-   └── 🏗️ frontend  → Node 20 + Vite build
-```
-
-Merge bloqueado se qualquer job falhar.
 
 ---
 
