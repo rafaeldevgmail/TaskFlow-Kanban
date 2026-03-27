@@ -1,59 +1,263 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ⚡ TaskFlow Kanban
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Sistema de Gerenciamento de Tarefas e Clientes construído com **Laravel 11**, **Vue 3** e **PostgreSQL** (Neon.tech)
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=flat-square&logo=laravel&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue-3-42b883?style=flat-square&logo=vue.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-336791?style=flat-square&logo=postgresql&logoColor=white)
+![JWT](https://img.shields.io/badge/Auth-JWT-d63aff?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-Pest-f7971e?style=flat-square)
+![CI](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-6c63ff?style=flat-square&logo=githubactions&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📸 Preview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| Dashboard | Kanban | Clientes |
+|-----------|--------|----------|
+| Stats, gráficos e tarefas recentes | Board com 4 colunas drag-and-drop | Tabela com busca e filtros |
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Funcionalidades
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- 🔐 **Autenticação JWT** — Register, Login, Logout e Refresh token
+- ✅ **Gestão de Tarefas** — Kanban board com 4 status: A Fazer, Em Progresso, Revisão e Concluído
+- 👥 **Gestão de Clientes** — CRUD completo com busca, filtros e página de detalhe
+- 📊 **Dashboard** — Métricas em tempo real, tarefas atrasadas e gráfico de produtividade
+- 🌙 **Tema Claro/Escuro** — Alternância com persistência no localStorage
+- 📚 **API Documentada** — OpenAPI 3.1 gerada automaticamente via Scramble (`/docs/api`)
+- 🧪 **Testes Automatizados** — 16+ testes com Pest cobrindo toda a API
+- 🚀 **CI/CD** — Pipeline GitHub Actions com testes, lint e build automáticos
+- ☁️ **Codespaces Ready** — Ambiente de desenvolvimento configurado com `devcontainer.json`
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🏗️ Stack Tecnológica
 
-### Premium Partners
+### Backend
+| Tecnologia | Versão | Uso |
+|------------|--------|-----|
+| Laravel | 11 | Framework principal |
+| PHP | 8.3 | Linguagem |
+| PostgreSQL | 17 | Banco de dados (Neon.tech) |
+| JWT Auth | tymon/jwt-auth | Autenticação stateless |
+| Scramble | dedoc/scramble | Documentação OpenAPI automática |
+| Pest | 2.x | Testes modernos |
+| Laravel Pint | — | Code style (PSR-12) |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Frontend
+| Tecnologia | Versão | Uso |
+|------------|--------|-----|
+| Vue | 3 | Framework reativo |
+| Pinia | 2 | Gerenciamento de estado |
+| Vue Router | 4 | Roteamento SPA |
+| Axios | — | HTTP client com interceptors JWT |
+| Vite | 5 | Build tool |
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 Como Rodar
 
-## Code of Conduct
+### Pré-requisitos
+- PHP 8.3+
+- Node 20+
+- Composer
+- Conta no [Neon.tech](https://neon.tech) (PostgreSQL gratuito)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1. Clone o repositório
+```bash
+git clone https://github.com/rafaeldevgmail/TaskFlow-Kanban.git
+```
 
-## Security Vulnerabilities
+### 2. Instale as dependências
+```bash
+composer install
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 3. Configure o ambiente
+```bash
+cp .env.example .env
+php artisan key:generate
+php artisan jwt:secret
+```
 
-## License
+### 4. Configure o banco (Neon.tech)
+Edite o `.env` com suas credenciais do Neon.tech:
+```env
+DB_CONNECTION=pgsql
+DB_HOST=ep-xxxx-xxxx.us-east-2.aws.neon.tech
+DB_PORT=5432
+DB_DATABASE=neondb
+DB_USERNAME=neondb_owner
+DB_PASSWORD=sua_senha
+DB_SSLMODE=require
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+VITE_API_URL=http://localhost:8000/api/v1
+```
+
+### 5. Rode as migrations e seed
+```bash
+php artisan migrate --seed
+```
+> Cria o usuário demo: `demo@taskflow.dev` / `password`
+
+### 6. Inicie os servidores
+```bash
+# Terminal 1 — Laravel API
+php artisan serve
+
+# Terminal 2 — Vite (Vue)
+npm run dev
+```
+
+Acesse: **http://localhost:5173**
+
+---
+
+## 🐳 GitHub Codespaces
+
+O projeto inclui `.devcontainer/devcontainer.json` configurado. Basta abrir no Codespaces:
+
+1. Clique em **Code → Codespaces → Create codespace**
+2. Aguarde o setup automático (~2 min)
+3. Na aba **Ports**, torne as portas `8000` e `5173` públicas
+4. Configure o `.env` com suas credenciais do Neon.tech
+5. Execute `php artisan migrate --seed && php artisan serve` e `npm run dev`
+
+---
+
+## 🔌 Endpoints da API
+
+Base URL: `/api/v1`
+
+### Auth
+```
+POST   /auth/register    Criar conta
+POST   /auth/login       Login (retorna JWT)
+POST   /auth/logout      Logout
+POST   /auth/refresh     Renovar token
+GET    /auth/me          Usuário autenticado
+```
+
+### Tasks
+```
+GET    /tasks            Listar (filtros: status, priority, search)
+POST   /tasks            Criar tarefa
+GET    /tasks/{id}       Detalhes
+PUT    /tasks/{id}       Atualizar
+PATCH  /tasks/{id}/status  Atualizar apenas o status
+DELETE /tasks/{id}       Excluir (soft delete)
+```
+
+### Clients
+```
+GET    /clients          Listar (filtros: status, search)
+POST   /clients          Criar cliente
+GET    /clients/{id}     Detalhes + tarefas vinculadas
+PUT    /clients/{id}     Atualizar
+DELETE /clients/{id}     Excluir (soft delete)
+```
+
+### Dashboard
+```
+GET    /dashboard        Stats, tarefas recentes e gráfico
+```
+
+> 📚 Documentação interativa completa em `/docs/api`
+
+---
+
+## 🧪 Testes
+
+```bash
+# Rodar todos os testes
+php artisan test
+
+# Com cobertura de código
+php artisan test --coverage --min=80
+
+# Testes em paralelo
+php artisan test --parallel
+
+# Filtrar por grupo
+php artisan test --filter AuthTest
+```
+
+### Cobertura atual
+| Módulo | Testes |
+|--------|--------|
+| Auth (register, login, logout) | ✅ 3 |
+| Tasks (CRUD + status + auth) | ✅ 6 |
+| Clients (CRUD + auth) | ✅ 5 |
+| Dashboard | ✅ 1 |
+
+---
+
+## 🔄 CI/CD Pipeline
+
+O pipeline GitHub Actions roda automaticamente em todo `push` e `pull_request`:
+
+```
+Push / PR
+   │
+   ├── 🧪 test      → PHP 8.3 + PostgreSQL 17 + Pest (cobertura mín. 80%)
+   ├── 🎨 lint      → Laravel Pint (PSR-12)
+   └── 🏗️ frontend  → Node 20 + Vite build
+```
+
+Merge bloqueado se qualquer job falhar.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+TaskFlow-Kanban/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/Api/    # AuthController, TaskController, ClientController, DashboardController
+│   │   └── Requests/           # Form Requests com validação
+│   ├── Models/                 # User, Task, Client (com SoftDeletes)
+│   └── Policies/               # TaskPolicy, ClientPolicy (autorização por dono)
+├── database/
+│   ├── migrations/             # clients e tasks com índices otimizados
+│   ├── factories/              # ClientFactory, TaskFactory
+│   └── seeders/                # DatabaseSeeder com dados demo
+├── routes/
+│   └── api.php                 # Rotas versionadas em /api/v1
+├── tests/
+│   └── Feature/CrmTest.php     # 16 testes de integração
+├── resources/js/
+│   ├── views/                  # DashboardView, TasksView, ClientsView, ClientDetailView
+│   ├── stores/                 # Pinia: auth, tasks, clients
+│   ├── router/                 # Vue Router com guards de autenticação
+│   ├── services/api.js         # Axios com interceptors JWT
+│   └── App.vue                 # Layout principal + tema claro/escuro
+└── .github/workflows/
+    └── ci.yml                  # Pipeline CI/CD completo
+```
+
+---
+
+## 🔒 Segurança
+
+- **JWT stateless** — tokens com expiração configurável, sem sessão no servidor
+- **Policies Laravel** — cada usuário acessa apenas seus próprios recursos
+- **Form Requests** — validação centralizada com mensagens de erro padronizadas
+- **Soft Deletes** — dados nunca são removidos permanentemente
+- **SSL obrigatório** — conexão com Neon.tech sempre criptografada
+- **CORS configurado** — apenas origens permitidas acessam a API
+
+---
+
+## 👤 Autor
+
+Feito com ☕ e determinação para impressionar recrutadores.
+
+---
+
+## 📄 Licença
+
+MIT License — use, modifique e distribua à vontade.
