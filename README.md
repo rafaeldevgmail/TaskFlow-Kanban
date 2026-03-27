@@ -8,7 +8,17 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-d63aff?style=flat-square)
 ![Tests](https://img.shields.io/badge/Tests-Pest-f7971e?style=flat-square)
 
+---
 
+## 📸 Preview
+
+![Screenshot do Dashboard](./assets/Login.jpg)
+![Screenshot do Dashboard](./assets/Tasks.jpg)
+![Screenshot do Dashboard](./assets/Dashboard.jpg)
+![Screenshot do Dashboard](./assets/TaskEdit.jpg)
+![Screenshot do Dashboard](./assets/Clients.jpg)
+![Screenshot do Dashboard](./assets/ClientDetails.jpg)
+![Screenshot do Dashboard](./assets/ClientEdit.jpg)    
 ---
 
 ## ✨ Funcionalidades
