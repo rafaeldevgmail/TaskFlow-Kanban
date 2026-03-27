@@ -201,14 +201,12 @@ TaskFlow-Kanban/
 │   └── api.php                 # Rotas versionadas em /api/v1
 ├── tests/
 │   └── Feature/CrmTest.php     # 16 testes de integração
-├── resources/js/
-│   ├── views/                  # DashboardView, TasksView, ClientsView, ClientDetailView
-│   ├── stores/                 # Pinia: auth, tasks, clients
-│   ├── router/                 # Vue Router com guards de autenticação
-│   ├── services/api.js         # Axios com interceptors JWT
-│   └── App.vue                 # Layout principal + tema claro/escuro
-└── .github/workflows/
-    └── ci.yml                  # Pipeline CI/CD completo
+└── resources/js/
+    ├── views/                  # DashboardView, TasksView, ClientsView, ClientDetailView
+    ├── stores/                 # Pinia: auth, tasks, clients
+    ├── router/                 # Vue Router com guards de autenticação
+    ├── services/api.js         # Axios com interceptors JWT
+    └── App.vue                 # Layout principal + tema claro/escuro
 ```
 
 ---
